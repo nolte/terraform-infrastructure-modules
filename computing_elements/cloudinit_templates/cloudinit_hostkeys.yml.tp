@@ -1,0 +1,10 @@
+#cloud-config
+%{ if hostkey_predefined }
+ssh_keys:
+  rsa_private: "${hostkey_rsa_private}"
+  rsa_public: "${hostkey_rsa_public}"
+  ecdsa_private: "${hostkey_ecdsa_private}"
+  ecdsa_public: "${hostkey_ecdsa_public}"
+  ed25519_private: "${hostkey_ed25519_private}"
+  ed25519_public: "${hostkey_ed25519_public}"
+%{ endif }
