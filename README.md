@@ -9,3 +9,17 @@ source ~/venvs/development/bin/activate
 pip install -r requirements.txt
 pre-commit install
 ```
+
+
+## Usage
+
+```terraform
+module "private_access_key" {
+    source = "git::https://github.com/nolte/terraform-infrastructure-modules.git?ref=v0.0.1.dev"
+    name      = "private_access"
+    pass_path = "${var.private_access_pass_path}"
+    labels = {
+        usage = "manual"
+    }
+}
+```
