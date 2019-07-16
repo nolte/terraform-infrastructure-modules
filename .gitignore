@@ -1,0 +1,9 @@
+*.output-vagrant-*
+output-vagrant
+.tox
+*.retry
+*.vagrant
+*.terraform
+*.tfstate
+*.tfstate.*
+*.pyc

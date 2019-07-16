@@ -15,7 +15,7 @@ pre-commit install
 
 ```terraform
 module "private_access_key" {
-    source = "git::https://github.com/nolte/terraform-infrastructure-modules.git?ref=v0.0.2.dev"
+    source = "git::https://github.com/nolte/terraform-infrastructure-modules.git//project_access_elements?ref=v0.0.2.dev"
     name      = "private_access"
     pass_path = "${var.private_access_pass_path}"
     labels = {
