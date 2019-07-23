@@ -9,7 +9,7 @@ Repository for Shared, reuseable Terraform Modules.  At the Moment the modules o
 
 ```terraform
 module "private_access_key" {
-    source = "git::https://github.com/nolte/terraform-infrastructure-modules.git//[module_name]?ref=v0.0.2"
+    source = "git::https://github.com/nolte/terraform-infrastructure-modules.git//[module_name]?ref=v0.0.3.dev"
     ...
 }
 ```
