@@ -4,6 +4,9 @@ env:
   matrix:
     - SCENARIO_NAME=fix_lint
     - SCENARIO_NAME=docs
+before_install:
+  - sudo apt-get -qq update
+  - sudo apt-get install -y terraform
 install:
   - pip install tox-travis
 script:
