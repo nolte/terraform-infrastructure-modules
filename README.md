@@ -1,5 +1,7 @@
 # Terraform Modules
 
+[![Github Project Stars](https://img.shields.io/github/stars/nolte/terraform-infrastructure-modules.svg?label=Stars&style=social)](https://github.com/nolte/terraform-infrastructure-modules) [![Travis CI build status](https://travis-ci.org/nolte/terraform-infrastructure-modules.svg?branch=master)](https://travis-ci.org/nolte/terraform-infrastructure-modules) [![Documentation Status](https://readthedocs.org/projects/terraform-infrastructure-modules/badge/?version=latest)](https://terraform-infrastructure-modules.readthedocs.io/en/stable/?badge=stable) [![Github Issue Tracking](https://img.shields.io/github/issues-raw/nolte/terraform-infrastructure-modules.svg)](https://github.com/nolte/terraform-infrastructure-modules) [![Github LatestRelease](https://img.shields.io/github/release/nolte/terraform-infrastructure-modules.svg)](https://github.com/nolte/terraform-infrastructure-modules)
+
 Repository for Shared, reuseable Terraform Modules.  At the Moment the modules only useable for the [hetzner.de/cloud](https://hetzner.de/cloud), with the [terraform](https://www.terraform.io/docs/providers/hcloud/index.html) Provider.
 
 

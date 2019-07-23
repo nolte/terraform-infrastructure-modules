@@ -1,0 +1,10 @@
+---
+language: python
+env:
+  matrix:
+    - SCENARIO_NAME=fix_lint
+    - SCENARIO_NAME=docs
+install:
+  - pip install tox-travis
+script:
+  - tox -e ${SCENARIO_NAME}
