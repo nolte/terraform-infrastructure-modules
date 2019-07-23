@@ -10,6 +10,10 @@ data "template_file" "cloudinit_base" {
   template = "${file("${path.module}/cloudinit_templates/cloudinit.yml")}"
 }
 
+data "template_file" "cloudinit_pre_configured_files" {
+  template = "${file("${path.module}/cloudinit_templates/cloudinit_files.yml.tp")}"
+}
+
 data "template_file" "cloudinit_users" {
   template = "${file("${path.module}/cloudinit_templates/cloudinit users.yml.tp")}"
 
@@ -29,6 +33,11 @@ data "template_cloudinit_config" "config" {
     filename     = "init.cfg"
     content_type = "text/cloud-config"
     content      = "${data.template_file.cloudinit_base.rendered}"
+  }
+  part {
+    filename     = "files.cfg"
+    content_type = "text/cloud-config"
+    content      = "${data.template_file.cloudinit_pre_configured_files.rendered}"
   }
   part {
     filename     = "users.cfg"
