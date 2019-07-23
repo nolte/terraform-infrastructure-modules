@@ -6,7 +6,9 @@ env:
     - SCENARIO_NAME=docs
 before_install:
   - sudo apt-get -qq update
-  - sudo apt-get install -y terraform
+  - sudo apt-get install -y bsdtar
+  - wget -qO- https://releases.hashicorp.com/terraform/0.12.5/terraform_0.12.5_linux_amd64.zip | sudo bsdtar -xvf- -C /usr/bin
+  - sudo chmod +x /usr/bin/terraform
 install:
   - pip install tox-travis
 script:
