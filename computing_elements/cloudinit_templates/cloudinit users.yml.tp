@@ -1,9 +1,0 @@
-users:
-  - name: ansible
-    gecos: Ansible Machine User
-    primary_group: machine-users
-    sudo: ALL=(ALL) NOPASSWD:ALL
-    groups:
-      - ssh-users
-    ssh_authorized_keys:
-     - "${ssh_machine_key_id}"
