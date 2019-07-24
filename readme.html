@@ -1,0 +1,293 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Terraform Modules &mdash; Terraform Modules  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/custome.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Project Access Elements Module" href="modules.html" />
+    <link rel="prev" title="Terraform Module Collection" href="index.html" />
+ 
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Terraform Modules
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                v0.0.3
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Table of Contents</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Terraform Modules</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#usage">Usage</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#modules">Modules</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#development">Development</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#releasing">Releasing</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="modules.html">Project Access Elements Module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="modules.html#storage-elements-module">Storage Elements Module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="modules.html#computing-elements-module">Computing Elements Module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="glossary.html">glossary</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Terraform Modules</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Terraform Modules</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/readme.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="terraform-modules">
+<h1>Terraform Modules<a class="headerlink" href="#terraform-modules" title="Permalink to this headline">¶</a></h1>
+<a class="reference external image-reference" href="https://github.com/nolte/terraform-infrastructure-modules"><img alt="Github Project Stars" src="https://img.shields.io/github/stars/nolte/terraform-infrastructure-modules.svg?label=Stars&amp;style=social" /></a>
+<a class="reference external image-reference" href="https://travis-ci.org/nolte/terraform-infrastructure-modules"><img alt="Travis CI build status" src="https://travis-ci.org/nolte/terraform-infrastructure-modules.svg?branch=master" /></a>
+<a class="reference external image-reference" href="https://terraform-infrastructure-modules.readthedocs.io/en/stable/?badge=stable"><img alt="Documentation Status" src="https://readthedocs.org/projects/terraform-infrastructure-modules/badge/?version=latest" /></a>
+<a class="reference external image-reference" href="https://github.com/nolte/terraform-infrastructure-modules"><img alt="Github Issue Tracking" src="https://img.shields.io/github/issues-raw/nolte/terraform-infrastructure-modules.svg" /></a>
+<a class="reference external image-reference" href="https://github.com/nolte/terraform-infrastructure-modules"><img alt="Github LatestRelease" src="https://img.shields.io/github/release/nolte/terraform-infrastructure-modules.svg" /></a>
+<p>Repository for Shared, reuseable Terraform Modules.  At the Moment the modules only useable for the <a class="reference external" href="https://hetzner.de/cloud">hetzner.de/cloud</a>, with the <a class="reference external" href="https://www.terraform.io/docs/providers/hcloud/index.html">terraform</a> Provider.</p>
+<div class="section" id="usage">
+<h2>Usage<a class="headerlink" href="#usage" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-terraform notranslate"><div class="highlight"><pre><span></span>module &quot;private_access_key&quot; {
+    source = &quot;git::https://github.com/nolte/terraform-infrastructure-modules.git//[module_name]?ref=v0.0.3&quot;
+    ...
+}
+</pre></div>
+</div>
+<div class="section" id="modules">
+<h3>Modules<a class="headerlink" href="#modules" title="Permalink to this headline">¶</a></h3>
+<table border="1" class="docutils">
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">module</th>
+<th class="head">description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">project_access_elements</span></code></td>
+<td>Handle the Accees Keys from a Project (wrapper for the <a class="reference external" href="https://www.terraform.io/docs/providers/hcloud/r/ssh_key.html">hcloud_ssh_key</a>).</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">storage_elements</span></code></td>
+<td>Handle Storage Volumes (wrapper for <a class="reference external" href="https://www.terraform.io/docs/providers/hcloud/r/volume.html">hcloud_volume</a>).</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">computing_elements</span></code></td>
+<td>Handle Computing Instances (wrapper for <a class="reference external" href="https://www.terraform.io/docs/providers/hcloud/r/server.html">hcloud_server</a>), execute a preconfiguration with <code class="docutils literal notranslate"><span class="pre">CloudInit</span></code>.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="development">
+<h2>Development<a class="headerlink" href="#development" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>virtualenv -p python3 ~/venvs/development
+<span class="nb">source</span> ~/venvs/development/bin/activate
+pip install -r requirements.txt
+pre-commit install
+</pre></div>
+</div>
+<div class="section" id="releasing">
+<h3>Releasing<a class="headerlink" href="#releasing" title="Permalink to this headline">¶</a></h3>
+<p>Must be executed from the <code class="docutils literal notranslate"><span class="pre">develop</span></code> branch.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pre-commit uninstall <span class="se">\</span>
+    <span class="o">&amp;&amp;</span> bump2version --tag release --commit <span class="se">\</span>
+    <span class="o">&amp;&amp;</span> git checkout master <span class="o">&amp;&amp;</span> git merge develop <span class="o">&amp;&amp;</span> git checkout develop <span class="se">\</span>
+    <span class="o">&amp;&amp;</span> bump2version --no-tag patch --commit <span class="se">\</span>
+    <span class="o">&amp;&amp;</span> git push origin master --tags <span class="se">\</span>
+    <span class="o">&amp;&amp;</span> git push origin develop <span class="se">\</span>
+    <span class="o">&amp;&amp;</span> pre-commit install
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="modules.html" class="btn btn-neutral float-right" title="Project Access Elements Module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral float-left" title="Terraform Module Collection" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+  
+<div class="github-fork-ribbon-wrapper right">
+    <div class="github-fork-ribbon">
+        <a href="https://github.com/nolte/terraform-infrastructure-modules">Fork me at GitHub</a>
+    </div>
+</div>
+ 
+
+
+</body>
+</html>

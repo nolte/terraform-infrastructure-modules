@@ -1,0 +1,332 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Project Access Elements Module &mdash; Terraform Modules  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/custome.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="glossary" href="glossary.html" />
+    <link rel="prev" title="Terraform Modules" href="readme.html" />
+ 
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Terraform Modules
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                v0.0.3
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Table of Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="readme.html">Terraform Modules</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Project Access Elements Module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#storage-elements-module">Storage Elements Module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#computing-elements-module">Computing Elements Module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#ansible-user">Ansible User</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#sshd-config">SSHD Config</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#volumes">Volumes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="glossary.html">glossary</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Terraform Modules</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Project Access Elements Module</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/modules.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="project-access-elements-module">
+<h1>Project Access Elements Module<a class="headerlink" href="#project-access-elements-module" title="Permalink to this headline">¶</a></h1>
+<p>Required: <a class="reference external" href="https://github.com/camptocamp/terraform-provider-pass">camptocamp/terraform-provider-pass</a></p>
+<div class="literal-block-wrapper docutils container" id="example-module-project-access-elements">
+<div class="code-block-caption"><span class="caption-text">Create a SSH Key from given pass path</span><a class="headerlink" href="#example-module-project-access-elements" title="Permalink to this code">¶</a></div>
+<div class="highlight-terraform notranslate"><div class="highlight"><pre><span></span>module &quot;management_access_key&quot; {
+  source = &quot;git::https://github.com/nolte/terraform-infrastructure-modules.git//project_access_elements?ref=v0.0.3&quot;
+
+  name      = &quot;management_key&quot;
+  pass_path = &quot;${var.machine_access_pass_path}&quot;
+  labels = {
+    usage = &quot;machine&quot;
+  }
+}
+</pre></div>
+</div>
+</div>
+<p>For more Information take a look to the source at <code class="docutils literal notranslate"><span class="pre">project_access_elements/main.tf</span></code> and <code class="docutils literal notranslate"><span class="pre">project_access_elements/variables.tf</span></code></p>
+</div>
+<div class="section" id="storage-elements-module">
+<h1>Storage Elements Module<a class="headerlink" href="#storage-elements-module" title="Permalink to this headline">¶</a></h1>
+<div class="literal-block-wrapper docutils container" id="example-module-storage-elements">
+<div class="code-block-caption"><span class="caption-text">Handle a Storage Volume</span><a class="headerlink" href="#example-module-storage-elements" title="Permalink to this code">¶</a></div>
+<div class="highlight-terraform notranslate"><div class="highlight"><pre><span></span>module &quot;minio_storage_runtime&quot; {
+  source       = &quot;git::https://github.com/nolte/terraform-infrastructure-modules.git//storage_elements?ref=v0.0.3&quot;
+
+  storage_name = &quot;minio_storage_runtime&quot;
+  storage_size = 30
+  storage_labels = {
+    service = &quot;storagebox&quot;
+    type    = &quot;runtime_storage&quot;
+  }
+}
+</pre></div>
+</div>
+</div>
+<p>For more Information take a look to the source at <code class="docutils literal notranslate"><span class="pre">storage_elements/main.tf</span></code> and <code class="docutils literal notranslate"><span class="pre">storage_elements/variables.tf</span></code></p>
+</div>
+<div class="section" id="computing-elements-module">
+<h1>Computing Elements Module<a class="headerlink" href="#computing-elements-module" title="Permalink to this headline">¶</a></h1>
+<p>Crate a Ready For Configure VM, with mounted Volues and preconfigured Ansible User (ready for, <a class="reference external" href="https://github.com/nolte/ansible_playbook-baseline-online-server">nolte/ansible_playbook-baseline-online-server</a>).</p>
+<div class="literal-block-wrapper docutils container" id="example-module-computing-elements">
+<div class="code-block-caption"><span class="caption-text">handle a reconfigured computing instance</span><a class="headerlink" href="#example-module-computing-elements" title="Permalink to this code">¶</a></div>
+<div class="highlight-terraform notranslate"><div class="highlight"><pre><span></span>module &quot;minio_computing_elements&quot; {
+  source                                           = &quot;git::https://github.com/nolte/terraform-infrastructure-modules.git//computing_elements?ref=v0.0.3&quot;
+
+  computing_instance_name                          = &quot;${var.minio_computing_instance_name}&quot;
+  computing_instance_usage_root_key                = &quot;${data.hcloud_ssh_key.machine_key.id}&quot;
+  computing_instance_labels                        = &quot;${local.merged_minio_computing_instance_labels}&quot;
+  computing_instance_ssh_machine_key_id_var        = &quot;${data.hcloud_ssh_key.machine_key.public_key}&quot;
+  computing_instance_ssh_private_key_id_var        = &quot;${data.hcloud_ssh_key.private_key.public_key}&quot;
+  computing_instance_additional_volumes_cloud_init = &quot;${data.template_file.cloudinit_mounts.rendered}&quot;
+}
+</pre></div>
+</div>
+</div>
+<p>you will find some example used in <a class="reference external" href="https://github.com/nolte/personal-storage-infrastructure">nolte/personal-storage-infrastructure</a> or <a class="reference external" href="https://nolte.github.io/minecraft-infrastructure/index.html">nolte/minecraft-infrastructure</a>.</p>
+<div class="section" id="ansible-user">
+<h2>Ansible User<a class="headerlink" href="#ansible-user" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">users</span><span class="p">:</span>
+  <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">ansible</span>
+    <span class="nt">gecos</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Ansible Machine User</span>
+    <span class="nt">primary_group</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">machine-users</span>
+    <span class="nt">sudo</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">ALL=(ALL) NOPASSWD:ALL</span>
+    <span class="nt">groups</span><span class="p">:</span>
+      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">ssh-users</span>
+    <span class="nt">ssh_authorized_keys</span><span class="p">:</span>
+     <span class="p p-Indicator">-</span> <span class="s">&quot;${ssh_machine_key_id}&quot;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="sshd-config">
+<h2>SSHD Config<a class="headerlink" href="#sshd-config" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">write_files</span><span class="p">:</span>
+  <span class="p p-Indicator">-</span> <span class="nt">path</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">/etc/ssh/sshd_config</span>
+    <span class="nt">permissions</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">0600</span>
+    <span class="nt">owner</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">root:root</span>
+    <span class="nt">content</span><span class="p">:</span> <span class="p p-Indicator">|</span>
+      <span class="no">HostKey /etc/ssh/ssh_host_rsa_key</span>
+      <span class="no">HostKey /etc/ssh/ssh_host_ecdsa_key</span>
+      <span class="no">HostKey /etc/ssh/ssh_host_ed25519_key</span>
+      <span class="no">SyslogFacility AUTHPRIV</span>
+      <span class="no">AuthorizedKeysFile .ssh/authorized_keys</span>
+      <span class="no">PasswordAuthentication no</span>
+      <span class="no">ChallengeResponseAuthentication no</span>
+      <span class="no"># GSSAPI options</span>
+      <span class="no">GSSAPIAuthentication yes</span>
+      <span class="no">GSSAPICleanupCredentials no</span>
+      <span class="no">UsePAM yes</span>
+      <span class="no">X11Forwarding no</span>
+      <span class="no"># Accept locale-related environment variables</span>
+      <span class="no">AcceptEnv LANG LC_CTYPE LC_NUMERIC LC_TIME LC_COLLATE LC_MONETARY LC_MESSAGES</span>
+      <span class="no">AcceptEnv LC_PAPER LC_NAME LC_ADDRESS LC_TELEPHONE LC_MEASUREMENT</span>
+      <span class="no">AcceptEnv LC_IDENTIFICATION LC_ALL LANGUAGE</span>
+      <span class="no">AcceptEnv XMODIFIERS</span>
+      <span class="no"># override default of no subsystems</span>
+      <span class="no">Subsystem sftp	/usr/libexec/openssh/sftp-server</span>
+      <span class="no">PermitRootLogin no</span>
+      <span class="no">AllowGroups ssh-users</span>
+      <span class="no">StrictModes yes</span>
+      <span class="no">Protocol 2</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="volumes">
+<h2>Volumes<a class="headerlink" href="#volumes" title="Permalink to this headline">¶</a></h2>
+<p>For more Information take a look to the source at <code class="docutils literal notranslate"><span class="pre">computing_elements/main.tf</span></code> and <code class="docutils literal notranslate"><span class="pre">computing_elements/variables.tf</span></code></p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="glossary.html" class="btn btn-neutral float-right" title="glossary" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="readme.html" class="btn btn-neutral float-left" title="Terraform Modules" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+  
+<div class="github-fork-ribbon-wrapper right">
+    <div class="github-fork-ribbon">
+        <a href="https://github.com/nolte/terraform-infrastructure-modules">Fork me at GitHub</a>
+    </div>
+</div>
+ 
+
+
+</body>
+</html>
