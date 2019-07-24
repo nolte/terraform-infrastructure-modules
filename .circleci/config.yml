@@ -200,9 +200,9 @@ jobs:
       - *run_task_install_tox_dependencies
       - checkout
       - run:
-          name: install bumpversion
+          name: install bump2version
           command: |
-            sudo pip install bumpversion
+            sudo pip install bump2version
       - run:
           name: check is release build
           command: |
@@ -211,15 +211,15 @@ jobs:
             if [[ $GIT_COMMIT_DESC =~ "GradeUP" ]] && [[ $CIRCLE_BRANCH == "develop" ]];
             then
               echo "match"
-              currentVersion=$(bumpversion --allow-dirty --dry-run --list release | grep new_version | sed -r s,"^.*=",,)
-              bumpversion --commit release
+              currentVersion=$(bump2version --allow-dirty --dry-run --list release | grep new_version | sed -r s,"^.*=",,)
+              bump2version --commit release
               git checkout -b release/v$currentVersion-pre
               git checkout develop
               if [[ $GIT_COMMIT_DESC =~ "minor" ]];
               then
-                bumpversion --commit minor
+                bump2version --commit minor
               else
-                bumpversion --commit patch
+                bump2version --commit patch
               fi
               echo "v$currentVersion-pre" > /tmp/workspaces/release_build.txt
             else
