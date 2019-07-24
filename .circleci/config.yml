@@ -116,11 +116,11 @@ jobs:
           - gh-pages
     steps:
       - checkout
+      - *run_task_install_tox_dependencies
       - run:
-          command: sudo pip install ansible-lint
-      - run:
-          command: ansible-lint $(pwd)
-
+          name: execute lint check
+          command: |
+            tox -e fix_lint
 
   # generate a changelog from existing github commits/pull requests
   # using https://github.com/ferrarimarco/docker-github-changelog-generator as generate container
