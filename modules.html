@@ -63,7 +63,7 @@
             
             
               <div class="version">
-                v0.0.3
+                v0.0.4
               </div>
             
           
@@ -169,7 +169,7 @@
 <div class="literal-block-wrapper docutils container" id="example-module-project-access-elements">
 <div class="code-block-caption"><span class="caption-text">Create a SSH Key from given pass path</span><a class="headerlink" href="#example-module-project-access-elements" title="Permalink to this code">¶</a></div>
 <div class="highlight-terraform notranslate"><div class="highlight"><pre><span></span>module &quot;management_access_key&quot; {
-  source = &quot;git::https://github.com/nolte/terraform-infrastructure-modules.git//project_access_elements?ref=v0.0.3&quot;
+  source = &quot;git::https://github.com/nolte/terraform-infrastructure-modules.git//project_access_elements?ref=v0.0.4&quot;
 
   name      = &quot;management_key&quot;
   pass_path = &quot;${var.machine_access_pass_path}&quot;
@@ -187,7 +187,7 @@
 <div class="literal-block-wrapper docutils container" id="example-module-storage-elements">
 <div class="code-block-caption"><span class="caption-text">Handle a Storage Volume</span><a class="headerlink" href="#example-module-storage-elements" title="Permalink to this code">¶</a></div>
 <div class="highlight-terraform notranslate"><div class="highlight"><pre><span></span>module &quot;minio_storage_runtime&quot; {
-  source       = &quot;git::https://github.com/nolte/terraform-infrastructure-modules.git//storage_elements?ref=v0.0.3&quot;
+  source       = &quot;git::https://github.com/nolte/terraform-infrastructure-modules.git//storage_elements?ref=v0.0.4&quot;
 
   storage_name = &quot;minio_storage_runtime&quot;
   storage_size = 30
@@ -207,7 +207,7 @@
 <div class="literal-block-wrapper docutils container" id="example-module-computing-elements">
 <div class="code-block-caption"><span class="caption-text">handle a reconfigured computing instance</span><a class="headerlink" href="#example-module-computing-elements" title="Permalink to this code">¶</a></div>
 <div class="highlight-terraform notranslate"><div class="highlight"><pre><span></span>module &quot;minio_computing_elements&quot; {
-  source                                           = &quot;git::https://github.com/nolte/terraform-infrastructure-modules.git//computing_elements?ref=v0.0.3&quot;
+  source                                           = &quot;git::https://github.com/nolte/terraform-infrastructure-modules.git//computing_elements?ref=v0.0.4&quot;
 
   computing_instance_name                          = &quot;${var.minio_computing_instance_name}&quot;
   computing_instance_usage_root_key                = &quot;${data.hcloud_ssh_key.machine_key.id}&quot;
