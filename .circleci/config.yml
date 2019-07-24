@@ -1,3 +1,4 @@
+---
 version: 2
 aliases:
   # Variables.
@@ -140,7 +141,7 @@ jobs:
       - persist_to_workspace:
           root: /tmp/workspaces/changelog
           paths:
-              - CHANGELOG.md
+            - CHANGELOG.md
 
   builddocs:
     <<: *container_python
@@ -159,7 +160,7 @@ jobs:
       - persist_to_workspace:
           root: /tmp/workspaces/build/.tox/docs/tmp
           paths:
-              - html
+            - html
 
   publishghpage:
     <<: *container_python
@@ -228,8 +229,8 @@ jobs:
       - persist_to_workspace:
           root: /tmp/workspaces
           paths:
-              - build/*
-              - release_build.txt
+            - build/*
+            - release_build.txt
 
   integrate_release:
     <<: *container_releasemanager
@@ -262,7 +263,7 @@ jobs:
       - persist_to_workspace:
           root: /tmp/workspaces
           paths:
-              - build/*
+            - build/*
 
   create_gh_release:
     <<: *container_releasemanager
