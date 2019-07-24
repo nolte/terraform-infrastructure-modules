@@ -35,6 +35,17 @@ aliases:
     docker:
       - image: circleci/golang:1.12
 
+
+  # @see https://stedolan.github.io/jq/
+  # used for better JSon Command Line parsing.
+  - &run_task_prepare_terraform
+    run:
+      name: install terraform to path
+      command: |
+        sudo apt-get install -y bsdtar
+        wget -qO- https://releases.hashicorp.com/terraform/0.12.5/terraform_0.12.5_linux_amd64.zip | sudo bsdtar -xvf- -C /usr/bin
+        sudo chmod +x /usr/bin/terraform
+
   # @see https://stedolan.github.io/jq/
   # used for better JSon Command Line parsing.
   - &run_task_prepare_jq
@@ -117,6 +128,7 @@ jobs:
     steps:
       - checkout
       - *run_task_install_tox_dependencies
+      - *run_task_prepare_terraform
       - run:
           name: execute lint check
           command: |
