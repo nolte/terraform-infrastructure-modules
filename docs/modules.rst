@@ -8,7 +8,7 @@ Required: `camptocamp/terraform-provider-pass <https://github.com/camptocamp/ter
     :name: example-module-project_access_elements
 
     module "management_access_key" {
-      source = "git::https://github.com/nolte/terraform-infrastructure-modules.git//project_access_elements?ref=v0.0.4.dev"
+      source = "git::https://github.com/nolte/terraform-infrastructure-modules.git//project_access_elements?ref=v0.0.4"
 
       name      = "management_key"
       pass_path = "${var.machine_access_pass_path}"
@@ -27,7 +27,7 @@ Storage Elements Module
     :name: example-module-storage_elements
 
     module "minio_storage_runtime" {
-      source       = "git::https://github.com/nolte/terraform-infrastructure-modules.git//storage_elements?ref=v0.0.4.dev"
+      source       = "git::https://github.com/nolte/terraform-infrastructure-modules.git//storage_elements?ref=v0.0.4"
 
       storage_name = "minio_storage_runtime"
       storage_size = 30
@@ -49,7 +49,7 @@ Crate a Ready For Configure VM, with mounted Volues and preconfigured Ansible Us
     :name: example-module-computing_elements
 
     module "minio_computing_elements" {
-      source                                           = "git::https://github.com/nolte/terraform-infrastructure-modules.git//computing_elements?ref=v0.0.4.dev"
+      source                                           = "git::https://github.com/nolte/terraform-infrastructure-modules.git//computing_elements?ref=v0.0.4"
 
       computing_instance_name                          = "${var.minio_computing_instance_name}"
       computing_instance_usage_root_key                = "${data.hcloud_ssh_key.machine_key.id}"
