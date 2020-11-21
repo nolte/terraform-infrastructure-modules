@@ -1,10 +1,7 @@
-
-
 # base masterdata from hcloud provider
 data "hcloud_image" "default_base_image" {
   name = "${var.computing_instance_image}"
 }
-
 
 data "template_file" "cloudinit_base" {
   template = "${file("${path.module}/cloudinit_templates/cloudinit.yml")}"
@@ -54,8 +51,6 @@ data "template_cloudinit_config" "config" {
 locals {
   computing_instance_labels_merged = "${var.computing_instance_labels}"
 }
-
-
 
 resource "hcloud_server" "computing_instance" {
   name        = "${var.computing_instance_name}"
