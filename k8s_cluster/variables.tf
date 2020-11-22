@@ -10,3 +10,7 @@ variable "cluster_sizing" {
     workers = map(any),
   })
 }
+
+variable "ansible_inventory_path" {
+  type = string
+}

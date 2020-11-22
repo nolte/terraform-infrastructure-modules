@@ -17,8 +17,6 @@ resource "hcloud_network_subnet" "public" {
   ip_range     = "10.200.0.0/13"
 }
 
-
-
 resource "hcloud_server_network" "master" {
   count     = length(module.cluster.cluster.masters)
   server_id = module.cluster.cluster.masters[count.index].id
@@ -47,4 +45,14 @@ module "bootstrap" {
   depends_on             = [time_sleep.cluster_ecs_finished]
   source                 = "git::https://github.com/nolte/ansible_playbook-baseline-online-server.git//terraform/configure?ref=v1.0.0"
   ansible_inventory_path = var.ansible_inventory_path
+}
+
+output "cluster" {
+  value = module.cluster.this
+}
+
+output "networks" {
+  value = {
+    public = hcloud_network_subnet.public,
+  }
 }

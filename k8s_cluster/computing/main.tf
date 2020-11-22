@@ -20,7 +20,7 @@ module "workers" {
   }), each.value.labels)
 }
 
-output "cluster" {
+output "this" {
   value = {
     masters = flatten(values(module.masters)[*].this)
     workers = flatten(values(module.workers)[*].this)
