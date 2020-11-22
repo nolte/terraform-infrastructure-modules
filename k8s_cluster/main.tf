@@ -18,14 +18,14 @@ resource "hcloud_network_subnet" "public" {
 }
 
 resource "hcloud_server_network" "master" {
-  count     = length(module.cluster.cluster.masters)
-  server_id = module.cluster.cluster.masters[count.index].id
+  count     = length(module.cluster.this.masters)
+  server_id = module.cluster.this.masters[count.index].id
   subnet_id = hcloud_network_subnet.public.id
 }
 #
 resource "hcloud_server_network" "workers" {
-  count     = length(module.cluster.cluster.workers)
-  server_id = module.cluster.cluster.workers[count.index].id
+  count     = length(module.cluster.this.workers)
+  server_id = module.cluster.this.workers[count.index].id
   subnet_id = hcloud_network_subnet.public.id
 }
 
@@ -53,6 +53,9 @@ output "cluster" {
 
 output "networks" {
   value = {
-    public = hcloud_network_subnet.public,
+    network = hcloud_network.cluster
+    subnet = {
+      public = hcloud_network_subnet.public,
+    }
   }
 }
