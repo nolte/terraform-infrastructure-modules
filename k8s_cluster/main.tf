@@ -45,6 +45,6 @@ resource "time_sleep" "cluster_ecs_finished" {
 # Bootstrap the nodes with commons playbooks
 module "bootstrap" {
   depends_on             = [time_sleep.cluster_ecs_finished]
-  source                 = "git::https://github.com/nolte/ansible_playbook-baseline-online-server.git//terraform/configure?ref=feature/centos8-v2"
+  source                 = "git::https://github.com/nolte/ansible_playbook-baseline-online-server.git//terraform/configure?ref=v1.0.0"
   ansible_inventory_path = var.ansible_inventory_path
 }
