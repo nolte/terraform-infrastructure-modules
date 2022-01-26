@@ -8,11 +8,11 @@ variable "computing_instance_flavour" {
   default = "cx11"
 }
 variable "computing_instance_image" {
-  default = "centos-7"
+  default = "centos-8"
 }
 
 variable "computing_instance_labels" {
-  type    = "map"
+  type    = map(string)
   default = {}
 }
 
