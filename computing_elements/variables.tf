@@ -12,7 +12,7 @@ variable "computing_instance_image" {
 }
 
 variable "computing_instance_labels" {
-  type    = "map"
+  type    = map(string)
   default = {}
 }
 

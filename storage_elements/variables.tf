@@ -22,7 +22,7 @@ variable "storage_active" {
 }
 
 variable "storage_labels" {
-  type        = "map"
+  type        = map(string)
   description = "Labels for the Storage volume."
   default     = {}
 }
