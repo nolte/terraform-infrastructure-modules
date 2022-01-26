@@ -1,0 +1,10 @@
+---
+# These settings are synced to GitHub by https://probot.github.io/apps/settings/
+
+_extends: gh-plumbing:.github/commons-settings.yml
+
+repository:
+  name: terraform-infrastructure-modules
+  description: Terraform Modules for easy Hetzner Cloud Usage
+  homepage: https://nolte.github.io/terraform-infrastructure-modules
+  topics: terraform-modules, hetzner-cloud

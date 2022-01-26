@@ -1,2 +1,1 @@
-pre-commit==1.17.0
-bump2version==0.5.10
+pre-commit==2.17.0
