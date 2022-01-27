@@ -25,6 +25,7 @@ module "private_access_key" {
 
 ## Development
 
+
 ```bash
 virtualenv -p python3 ~/venvs/development
 source ~/venvs/development/bin/activate
@@ -42,7 +43,6 @@ asdf plugin-add task https://github.com/nolte/asdf-task.git
 ```sh
 asdf install 
 ```
-
 
 List Existing tasks
 
@@ -64,4 +64,11 @@ export HCLOUD_TOKEN=$(pass internet/hetzner.com/projects/minecraft/terraform-tok
 export TF_machine_access_pass_path=private/keyfiles/ssh/online/onlineSecond_rsa.pub
 
 go test -v -timeout 30m
+```
+
+
+###  Docs
+
+```bash
+tox -e docs
 ```

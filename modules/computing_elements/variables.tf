@@ -19,7 +19,7 @@ variable "computing_instance_flavour" {
 }
 
 variable "computing_instance_image" {
-  default     = "centos-8"
+  default     = "rocky-8"
   description = "Compute Instance Image, like Centos"
 }
 
@@ -31,7 +31,7 @@ variable "computing_instance_labels" {
 
 variable "computing_instance_ssh_machine_key_id_var" {
   description = "Public Key for SSH Compute Instance access"
-  type        = "sting"
+  type        = string
 }
 
 variable "computing_instance_additional_volumes_cloud_init" {

@@ -40,5 +40,5 @@ tasks:
 
   tfdocs_generate:
     cmds:
-      - terraform-docs markdown ./{{.TF_MODULE_PATH}} > {{.TF_MODULE_PATH}}/{{.TF_MODULE_DOC_FILENAME}}
+      - terraform-docs markdown ./modules/{{.TF_MODULE_PATH}} > modules/{{.TF_MODULE_PATH}}/{{.TF_MODULE_DOC_FILENAME}}
     silent: true

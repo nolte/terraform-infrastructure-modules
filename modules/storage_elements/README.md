@@ -6,13 +6,13 @@ Manage HCloud Volumes.
 
 | Name | Version |
 |------|---------|
-| <a name="provider_hcloud"></a> [hcloud](#provider\_hcloud) | n/a |
+| <a name="provider_hcloud"></a> [hcloud](#provider\_hcloud) | 1.32.2 |
 
 ## Resources
 
 | Name | Type |
 |------|------|
-| [hcloud_volume.storage_volume](https://registry.terraform.io/providers/hashicorp/hcloud/latest/docs/resources/volume) | resource |
+| [hcloud_volume.storage_volume](https://registry.terraform.io/providers/hetznercloud/hcloud/1.32.2/docs/resources/volume) | resource |
 
 ## Inputs
 
