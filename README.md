@@ -32,17 +32,36 @@ pip install -r requirements.txt
 pre-commit install
 ```
 
+Add Required asdf Plugin Repositories for install additional tools.
 
-### Releasing
+```sh
+asdf plugin-add terraform-docs https://github.com/looztra/asdf-terraform-docs
+asdf plugin-add task https://github.com/nolte/asdf-task.git
+```
 
-Must be executed from the ``develop`` branch.
+```sh
+asdf install 
+```
 
-```bash
-pre-commit uninstall \
-    && bump2version --tag release --commit \
-    && git checkout master && git merge develop && git checkout develop \
-    && bump2version --no-tag patch --commit \
-    && git push origin master --tags \
-    && git push origin develop \
-    && pre-commit install
+
+List Existing tasks
+
+```sh
+$ task -l
+
+task: Available tasks for this project:
+* default:                              Generate All Module Readme Files
+* tfdocs_computing_elements:            Readme for Computing Elements
+* tfdocs_project_access_elements:       Readme for Project Access Elements
+* tfdocs_storage_elements:              Readme for Storage Elements
+```
+
+### Testing
+
+```
+export PASSWORD_STORE_DIR=~/.password-store
+export HCLOUD_TOKEN=$(pass internet/hetzner.com/projects/minecraft/terraform-token) 
+export TF_machine_access_pass_path=private/keyfiles/ssh/online/onlineSecond_rsa.pub
+
+go test -v -timeout 30m
 ```

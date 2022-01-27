@@ -12,4 +12,6 @@ This modules build the basic Infrastructure, from `nolte/personal-storage-infras
 
    readme
    modules
-   glossary
+   storage-element
+   computing-elements
+   project-access-elements
