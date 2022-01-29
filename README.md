@@ -66,9 +66,12 @@ export TF_machine_access_pass_path=private/keyfiles/ssh/online/onlineSecond_rsa.
 go test -v -timeout 30m
 ```
 
-
 ###  Docs
 
 ```bash
 tox -e docs
 ```
+## Links
+
+* [nolte/gh-plumbing](https://github.com/nolte/gh-plumbing) for a standardized build process.
+* [hcloud](https://registry.terraform.io/providers/hetznercloud/hcloud/latest/docs) Terraform Provider.
