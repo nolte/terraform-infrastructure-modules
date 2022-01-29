@@ -32,17 +32,7 @@ pip install -r requirements.txt
 pre-commit install
 ```
 
+## Links
 
-### Releasing
-
-Must be executed from the ``develop`` branch.
-
-```bash
-pre-commit uninstall \
-    && bump2version --tag release --commit \
-    && git checkout master && git merge develop && git checkout develop \
-    && bump2version --no-tag patch --commit \
-    && git push origin master --tags \
-    && git push origin develop \
-    && pre-commit install
-```
+* [nolte/gh-plumbing](https://github.com/nolte/gh-plumbing) for a standardized build process.
+* [hcloud](https://registry.terraform.io/providers/hetznercloud/hcloud/latest/docs) Terraform Provider.
