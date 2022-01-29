@@ -1,3 +1,10 @@
+/**
+ * # TF Module Storage Element
+ *
+ * Manage HCloud Volumes.
+ */
+
+
 # Permanent storage for the minio datas
 locals {
   merged_storage_labels = var.storage_labels

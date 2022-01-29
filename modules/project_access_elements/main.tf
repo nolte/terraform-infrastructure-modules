@@ -1,3 +1,8 @@
+/**
+ * # TF Module Access Element
+ *
+ * Using Existing SSH Key from Pass (Password Store) as HCloud SSH Access Key.
+ */
 
 data "pass_password" "ssh_public_key" {
   path = var.pass_path

@@ -1,0 +1,44 @@
+# https://taskfile.dev
+
+version: '3'
+
+vars:
+  TF_MODULE_DOC_FILENAME: README.md
+
+tasks:
+  default:
+    desc: Generate All Module Readme Files
+    cmds:
+      - task: tfdocs_computing_elements
+      - task: tfdocs_project_access_elements
+      - task: tfdocs_storage_elements
+
+  # .tox/docs/tmp/html/index.html
+
+  tfdocs_computing_elements:
+    desc: Readme for Computing Elements
+    cmds:
+      - task: tfdocs_generate
+        vars:
+          TF_MODULE_PATH: computing_elements
+    silent: true
+
+  tfdocs_project_access_elements:
+    desc: Readme for Project Access Elements
+    cmds:
+      - task: tfdocs_generate
+        vars:
+          TF_MODULE_PATH: project_access_elements
+    silent: true
+  tfdocs_storage_elements:
+    desc: Readme for Storage Elements
+    cmds:
+      - task: tfdocs_generate
+        vars:
+          TF_MODULE_PATH: storage_elements
+    silent: true
+
+  tfdocs_generate:
+    cmds:
+      - terraform-docs markdown ./modules/{{.TF_MODULE_PATH}} > modules/{{.TF_MODULE_PATH}}/{{.TF_MODULE_DOC_FILENAME}}
+    silent: true
