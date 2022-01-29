@@ -20,9 +20,9 @@ tasks:
     cmds:
       - task: tfdocs_generate
         vars:
-          TF_MODULE_PATH: computing_elements      
+          TF_MODULE_PATH: computing_elements
     silent: true
-    
+
   tfdocs_project_access_elements:
     desc: Readme for Project Access Elements
     cmds:

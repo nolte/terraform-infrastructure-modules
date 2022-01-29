@@ -19,4 +19,3 @@ Example
     }
 
 For more Information take a look to the source at ``storage_elements/main.tf`` and ``storage_elements/variables.tf``
-

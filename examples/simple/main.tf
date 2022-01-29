@@ -27,8 +27,8 @@ module "management_access_key" {
 module "storage" {
   source = "../../modules/storage_elements"
 
-  storage_name = "terratest-storage"
-  storage_size = 10
+  storage_name   = "terratest-storage"
+  storage_size   = 10
   storage_labels = local.common_labels
 }
 
