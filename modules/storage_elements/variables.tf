@@ -1,5 +1,6 @@
 variable "storage_name" {
   description = "The Name of the Data Volume"
+  type        = string
 }
 
 variable "storage_format" {
@@ -13,7 +14,8 @@ variable "storage_size" {
 }
 
 variable "storage_location" {
-  default = "hel1"
+  default     = "hel1"
+  description = "RZ Location for the Volume, shoud be the same like the Compute Instanze."
 }
 
 variable "storage_active" {

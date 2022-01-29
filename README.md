@@ -25,6 +25,7 @@ module "private_access_key" {
 
 ## Development
 
+
 ```bash
 virtualenv -p python3 ~/venvs/development
 source ~/venvs/development/bin/activate
@@ -32,6 +33,44 @@ pip install -r requirements.txt
 pre-commit install
 ```
 
+Add Required asdf Plugin Repositories for install additional tools.
+
+```sh
+asdf plugin-add terraform-docs https://github.com/looztra/asdf-terraform-docs
+asdf plugin-add task https://github.com/nolte/asdf-task.git
+```
+
+```sh
+asdf install 
+```
+
+List Existing tasks
+
+```sh
+$ task -l
+
+task: Available tasks for this project:
+* default:                              Generate All Module Readme Files
+* tfdocs_computing_elements:            Readme for Computing Elements
+* tfdocs_project_access_elements:       Readme for Project Access Elements
+* tfdocs_storage_elements:              Readme for Storage Elements
+```
+
+### Testing
+
+```
+export PASSWORD_STORE_DIR=~/.password-store
+export HCLOUD_TOKEN=$(pass internet/hetzner.com/projects/minecraft/terraform-token) 
+export TF_machine_access_pass_path=private/keyfiles/ssh/online/onlineSecond_rsa.pub
+
+go test -v -timeout 30m
+```
+
+###  Docs
+
+```bash
+tox -e docs
+```
 ## Links
 
 * [nolte/gh-plumbing](https://github.com/nolte/gh-plumbing) for a standardized build process.

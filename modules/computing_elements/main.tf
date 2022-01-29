@@ -1,4 +1,7 @@
-
+/**
+ * # TF Module Compute Element
+ *
+ */
 
 # base masterdata from hcloud provider
 data "hcloud_image" "default_base_image" {
@@ -19,7 +22,6 @@ data "template_file" "cloudinit_users" {
 
   vars = {
     ssh_machine_key_id = "${var.computing_instance_ssh_machine_key_id_var}"
-    ssh_private_key_id = "${var.computing_instance_ssh_private_key_id_var}"
   }
 }
 
