@@ -17,22 +17,22 @@ provider "registry.terraform.io/camptocamp/pass" {
 }
 
 provider "registry.terraform.io/hetznercloud/hcloud" {
-  version     = "1.33.1"
-  constraints = "1.33.1"
+  version     = "1.36.2"
+  constraints = "1.36.2"
   hashes = [
-    "h1:05hmQzosO4EVGg16qUb+brkSSMIVMRrLOgo6VWemtyo=",
-    "h1:32M3oGziujNtUWnaZCALd3zrROrnfC/bKak0DJ3ej0k=",
-    "h1:44/dVStnyiy1LELJOcSIR4dATnYSHdNq3KiCW/s/n04=",
-    "h1:EEhe85rtb91Oufdzcj4vnVwc6UTTlUN+TaXG1VO9nO4=",
-    "h1:TO2CjKPN0akv+FS4jim/A/DT1FFmPZ4pWz881Xu2okU=",
-    "h1:b67bWAMQjOJsLFjMgVM5XD3PHsC6y3cQGEGH/+xTqS8=",
-    "h1:fhDjWDrgGpkR7fZ+HX/BI7UZRgpj7BeRICet3xmELSA=",
-    "h1:lLTFojRafwQqMKZo3zQkKjhe1zjuYxvWa9kstU/pDgE=",
-    "h1:ozarpLqM2NoP4WuYe1GW+LGKedWVZIJqf8AQey2WJRk=",
-    "h1:qQq/LmtpMPZzjpC18+LNULJVvgBqmHnkftwqxXYR0fI=",
-    "h1:qvQGDcw11niyogj5fNPmGUlkXc/QTJh+UgfwUwZfDeM=",
-    "h1:u9l2QXrj2It1589C7wfTDCwi1UI+IM8U312erA4bo3w=",
-    "h1:uxrZ6O4TJIwJ5m5o9bKFEgyt0zVSGMYLq670kn1fsPc=",
-    "h1:wHdjwbmtBfFUV9Kz3H2To4ICrG2jZG2XL08OMauo1mU=",
+    "h1:AexkrsblHHfFHE+avLaoVpmG3BtX5otVcTREWRoXF/Y=",
+    "h1:BfYGeSQKBgWpe0TdCsMOxkz4GXe1zg9upgHD3Veuo+c=",
+    "h1:GM+7aDzrrS63joGkCBp2k8k/8BHwmXJdn9sD3w2EdVM=",
+    "h1:R3CBF3jln9YXj0Ey7pcu75yYXO38/X207V7wmioKADI=",
+    "h1:Spw+StiQqofNk1NMOsnsr1aEXgO0W7S3ZMoVvgRJVH4=",
+    "h1:VO/dl+g5NfJd436hmT+9NOMQk6oRU4Z9TSJJJrNlN0M=",
+    "h1:aBVfDEAUfPZMcSbi5LmMEMiRn4YoZ62ZZ1yKXyOktKU=",
+    "h1:bNmeosp9HlhYOtXi12BKjuNjKHgA4Nd7QptLRyfndG4=",
+    "h1:cAiO5x3emWWsU1ePrM1ErxzCq6fWUhXqgglqOv8lQEQ=",
+    "h1:ebRWkns4kPLpXhQk5i+p3AcK5m8qVk6b1KDtZQ4n2rA=",
+    "h1:j80GoBCzhFb9VARkFOnkClo8RWl+HFnPWK56LnHDPWs=",
+    "h1:n10fVdj/x+DOm2ikUXxSaKx4qP/cw0Nh5hGL0+rHMVQ=",
+    "h1:qqVxEeBkTe083SAKaPmCEHtDKjzqc/TWliHwL/aFA2c=",
+    "h1:ytiGjOYa6bdE5gNVUtRa8dgut6JghobbDoGYPG//D4A=",
   ]
 }
